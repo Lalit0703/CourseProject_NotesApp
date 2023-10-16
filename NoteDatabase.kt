@@ -1,0 +1,11 @@
+package com.androidatc.cp.data.database
+
+import androidx.room.Database
+import androidx.room.RoomDatabase
+import com.androidatc.cp.data.dao.NoteDao
+import com.androidatc.cp.data.entity.Note
+
+@Database(entities = arrayOf(Note::class), version = 1)
+abstract class NoteDatabase: RoomDatabase() {
+    abstract fun noteDao(): NoteDao
+}
